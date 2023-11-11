@@ -1,0 +1,103 @@
+{% extends "main/layout.html" %}
+
+    {% block body %}
+        <main>
+
+            <section class="breadcrumb_section text-center clearfix">
+                <div class="page_title_area has_overlay d-flex align-items-center clearfix" data-bg-image="../static/assets/images/breadcrumb/bg_03.jpg" style="height: 400px;">
+                    <div class="overlay"></div>
+                    <div class="container" data-aos="fade-up" data-aos-delay="100"><h1 class="page_title text-white mb-0">Reservation</h1></div>
+                </div>
+                <div class="breadcrumb_nav clearfix" data-bg-color="#F2F2F2">
+                    <div class="container">
+                        <ul class="ul_li clearfix">
+                            <li><a href="../static/index.html">Home</a></li>
+                            <li><a href="../static/car.html">Our Cars</a></li>
+                            <li>Reservation</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="reservation_section sec_ptb_100 clearfix">
+                <div class="container">
+                    <div class="row justify-content-lg-between justify-content-md-center justify-content-sm-center">
+                        <div class="col-lg-4 col-md-8 col-sm-10 col-xs-12">
+                            <div class="feature_vehicle_item mt-0 ml-0" data-aos="fade-up" data-aos-delay="100">
+                                <h3 class="item_title mb-0"><a href="../static/#!">{{ session['cname'] }}</a></h3>
+                                <div class="item_image position-relative">
+                                    <a class="image_wrap" href="../static/#!"><img src="../static/uploads/{{ session['img'] }}" alt="image_not_found" /> </a><span class="item_price bg_default_blue"> Rs.{{session['rent']}}/Day</span>
+                                </div>
+                                <ul class="info_list ul_li_center clearfix">
+                                    <li>{{ session['fuel'] }}</li>
+                                    <li>{{ session['model'] }}</li>
+                                    <li>{{ session['color'] }}</li>
+                                    <li>{{ session['driver'] }}</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-10 col-xs-12">
+                            <div class="reservation_form">
+                                <form action="/confirm" method="post">
+                                    <hr class="mt-0" data-aos="fade-up" data-aos-delay="700" />
+                                    <div class="reservation_offer_checkbox">
+                                        <h4 class="input_title" data-aos="fade-up" data-aos-delay="800">Your Offer Includes:</h4>
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12" data-aos="fade-up" data-aos-delay="900">
+                                                <div class="checkbox_input">
+                                                    <label for="offer1"><input type="checkbox" id="offer1" checked="checked" disabled/> {{session['p_lo']}}</label>
+                                                </div>
+                                                <div class="checkbox_input">
+                                                    <label for="offer2"><input type="checkbox" id="offer2" checked="checked" disabled/> {{session['d_lo']}}</label>
+                                                </div>
+                                                <div class="checkbox_input">
+                                                    <label for="offer3"><input type="checkbox" id="offer3" checked="checked" disabled/> {{session['date']}}</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12" data-aos="fade-up" data-aos-delay="900">
+                                                <div class="checkbox_input">
+                                                    <label for="offer4"><input type="checkbox" id="offer4" checked="checked" disabled/> {{session['pass']}}</label>
+                                                </div>
+                                                <div class="checkbox_input">
+                                                    <label for="offer5"><input type="checkbox" id="offer5" checked="checked" disabled/> {{session['color']}}</label>
+                                                </div>
+                                                <div class="checkbox_input">
+                                                    <label for="offer6"><input type="checkbox" id="offer6" checked="checked" disabled/> {{session['driver']}}</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr class="mt-0" data-aos="fade-up" data-aos-delay="100" />
+                                    <div class="reservation_customer_details">
+                                        <h4 class="input_title" data-aos="fade-up" data-aos-delay="100">Customer Details:</h4>
+
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-12 col-xs-12 col-xs-12">
+                                                <div class="form_item" data-aos="fade-up" data-aos-delay="400"><input type="text" name="firstname" value="{{session['name']}}" disabled/></div>
+                                            </div>
+
+                                            <div class="col-lg-6 col-md-12 col-xs-12 col-xs-12">
+                                                <div class="form_item" data-aos="fade-up" data-aos-delay="600"><input type="text" name="email" value="{{session['email']}}" disabled/></div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-12 col-xs-12 col-xs-12">
+                                                <div class="form_item" data-aos="fade-up" data-aos-delay="700"><input type="text" name="tel" value="{{session['phone']}}" disabled/></div>
+                                            </div>
+                                        </div>
+                                        <div data-aos="fade-up" data-aos-delay="100">
+                                            <a class="terms_condition" href="../static/#!"><i class="fas fa-info-circle mr-1"></i> You must be at least 21 years old to rent this car. Collision Damage Waiver (CDW)</a>
+                                        </div>
+                                        <hr data-aos="fade-up" data-aos-delay="200" />
+                                        <div class="row align-items-center justify-content-lg-between">
+
+                                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12" data-aos="fade-up" data-aos-delay="300">
+                                                <button type="submit" name="send_email" class="custom_btn bg_default_red text-uppercase">Reservation Now <img src="../static/assets/images/icons/icon_01.png" alt="icon_not_found" /></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+      {% endblock %}

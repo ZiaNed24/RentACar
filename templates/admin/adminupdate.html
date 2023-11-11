@@ -1,0 +1,100 @@
+{% extends "admin/admin.html" %}
+
+{% block body %}
+
+<section class="content-main" style="max-width: 720px">
+    <div class="content-header">
+        <h2 class="content-title">Update Car</h2>
+        <div>
+            <a href="../static/#" class="btn btn-outline-danger"> &times; Discard</a>
+        </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-body">
+            <form method="post" enctype="multipart/form-data" action="/admin/update_car/{{ car.id }}">
+                <div class="mb-4">
+                    <label for="product_name" class="form-label">Car Name</label>
+                    <input type="hidden" name="car_id" value="{{ car.id }}">
+                    <input type="text" name="name" placeholder="Type here" class="form-control" id="product_name" value="{{ car.name }}">
+                </div>
+
+                <div class="mb-4">
+                    <label class="form-label">Description</label>
+                    <textarea placeholder="Type here" name="description" class="form-control" rows="4">{{ car.description }}</textarea>
+                </div>
+
+                <div class="mb-4">
+                    <label class="form-label">Images</label>
+                    <input class="form-control" name="images" type="file" multiple>
+                </div>
+
+                <div class="mb-4">
+                    <label for="product_name" class="form-label">Rent</label>
+                    <input type="text" name="rent" class="form-control" value="{{ car.rent }}">
+                </div>
+                <div class="mb-4">
+                    <label for="product_name" class="form-label">Brand</label>
+                    <input type="text" name="b_name" class="form-control" value="{{ car.b_name }}">
+                </div>
+
+                <div class="row gx-2">
+                    <div class="col-sm-6 mb-3">
+                        <label class="form-label">Transmission</label>
+                        <select name="trans" class="form-select">
+                            <option value="Auto" > Auto </option>
+                            <option value="Manual" > Manual </option>
+                        </select>
+                    </div>
+                    <div class="col-sm-6 mb-3">
+                        <label class="form-label">Fuel Type</label>
+                        <select name="fuel" class="form-select">
+                            <option value="Petrol" > Petrol </option>
+                            <option value="CNG" > CNG </option>
+                            <option value="Diesel" > Diesel </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row gx-2">
+                    <div class="col-sm-6 mb-3">
+                        <label for="product_name" class="form-label">Color</label>
+                        <input type="text" name="color" class="form-control" value="{{ car.color }}">
+                    </div>
+                    <div class="col-sm-6 mb-3">
+                        <label class="form-label">Type</label>
+                        <select name="type" class="form-select">
+                            <option value="Sedan" > Sedan </option>
+                            <option value="Luxury" > Luxury </option>
+                            <option value="Simple" > Simple </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <label class="form-label">Engine</label>
+                    <div class="row gx-2">
+                        <div class="col-4">
+                            <input placeholder="Type" name="engine" type="text" class="form-control" value="{{ car.engine }}">
+                        </div>
+                        <div class="col-2">
+                            <select name="ac" class="form-select">
+                                <option value="ac" > AC </option>
+                                <option value="no ac" > No AC </option>
+                            </select>
+                        </div>
+                        <div class="col-2">
+                            <select name="capacity" class="form-select">
+                                <option value="Four" > Four seater </option>
+                                <option value="Seven" > Seven seater </option>
+                                <option value="Seven+" > Seven+ seater </option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Update Car</button>
+            </form>
+        </div>
+    </div> <!-- card end// -->
+</section> <!-- content-main end// -->
+</main>
+
+{% endblock %}

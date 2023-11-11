@@ -1,0 +1,64 @@
+{% extends "admin/admin.html" %}
+
+    {% block body %}
+
+<section class="content-main">
+
+<div class="content-header">
+	<h2 class="content-title">All Companies</h2>
+	<div>
+		<a href="../static/#" class="btn btn-primary"><i class="material-icons md-plus"></i> Create new</a>
+	</div>
+</div>
+
+<div class="card mb-4">
+	<header class="card-header">
+		<div class="row gx-3">
+			<div class="col-lg-4 me-auto">
+				<input type="text" placeholder="Search..." class="form-control">
+			</div>
+			<div class="col-lg-2 col-6">
+				<select class="form-select">
+					<option>Status 20</option>
+					<option>Status 30</option>
+					<option>Status 40</option>
+					<option>Status all</option>
+				</select>
+			</div>
+			<div class="col-lg-2 col-6">
+				<input type="date" class="form-control" name="">
+			</div>
+		</div>
+	</header> <!-- card-header end// -->
+	<div class="card-body">
+		<div class="row gx-3">
+			{% for new in new %}
+			<div class="col-xl-2 col-lg-3 col-md-4 col-6">
+				<figure class="card border-1">
+					<div class="card-header bg-white text-center">
+						<a href="/admin/singless/{{ new.name }}" class="img-wrap">
+								{% if new.images %}
+									<img style="height: 100px" class="img-fluid" src="{{ url_for('static', filename='uploads/' + new.images.split(',')[0]) }}" alt="{{ new.name }}">
+								{% else %}
+									<img height="76" class="img-fluid" src="{{ url_for('static', filename='placeholder.jpg') }}" alt="Placeholder Image">
+								{% endif %}
+							</a>
+					</div>
+					<figcaption class="card-body text-center">
+						<h6 class="card-title m-0">{{ new.name }}</h6>
+
+					</figcaption>
+				</figure>
+			</div> <!-- col.// -->
+			{% endfor %}
+		</div> <!-- row.// -->
+
+		
+	</div> <!-- card-body end// -->
+</div> <!-- card end// -->
+
+
+</section> <!-- content-main end// -->
+</main>
+
+{% endblock %}

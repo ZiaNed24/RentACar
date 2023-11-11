@@ -1,0 +1,308 @@
+   {% extends "main/layout.html" %}
+
+    {% block body %}
+        <main>
+            <section class="breadcrumb_section text-center clearfix">
+                <div class="page_title_area has_overlay d-flex align-items-center clearfix" data-bg-image="../static/assets/images/breadcrumb/bg_02.jpg" style="height: 400px">
+                    <div class="overlay"></div>
+                    <div class="container" data-aos="fade-up" data-aos-delay="100"><h1 class="page_title text-white mb-0">Choose Your Car Options</h1></div>
+                </div>
+                <div class="breadcrumb_nav clearfix" data-bg-color="#F2F2F2">
+                    <div class="container">
+                        <ul class="ul_li clearfix">
+                            <li><a href="../static/index.html">Home</a></li>
+                            <li><a href="../static/car.html">Our Cars</a></li>
+                            <li>Car Details</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <div class="details_section sec_ptb_100 pb-0 clearfix">
+                <div class="container">
+                    <div class="row justify-content-lg-between justify-content-md-center justify-content-sm-center">
+                        <div class="col-lg-4 col-md-8 col-sm-10 col-xs-12">
+                            <aside class="filter_sidebar sidebar_section" data-bg-color="#F2F2F2">
+                                <div class="sidebar_header" data-bg-gradient="linear-gradient(90deg, #0C0C0F, #292D45)"><h3 class="text-white mb-0">Filters</h3></div>
+                                <div class="sb_widget">
+                                    <form method="post" action="/register_car">
+                                        <div class="sb_widget car_picking" data-aos="fade-up" data-aos-delay="100">
+                                            <div class="form_item">
+                                                <h4 class="input_title">Pick Up Location</h4>
+                                                <div class="position-relative">
+                                                    <input  type="text" name="location1" placeholder="City, State or Airport Code" required /> <label for="location_two" class="input_icon"><i class="fas fa-map-marker-alt"></i></label>
+                                                </div>
+                                            </div>
+                                            <div class="form_item">
+                                                <h4 class="input_title">Drop Off Location</h4>
+                                                <div class="position-relative">
+                                                    <input  type="text" name="location2" placeholder="City, State or Airport Code" required /> <label for="location_two" class="input_icon"><i class="fas fa-map-marker-alt"></i></label>
+                                                </div>
+                                            </div>
+                                            <div class="form_item">
+                                                <h4 class="input_title">Pick A Date</h4>
+                                                <input type="date" name="date" required/>
+                                            </div>
+                                        </div>
+                                        <div class="sb_widget" data-aos="fade-up" data-aos-delay="100">
+                                            <h4 class="input_title">Number of passengers:</h4>
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <div class="checkbox_input">
+                                                        <label for="passengers_radio1"><input type="radio" id="passengers_radio1" name="passengers" checked="checked" value="2" /> 2</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="checkbox_input">
+                                                        <label for="passengers_radio2"><input  type="radio" id="passengers_radio2" name="passengers" value="5" /> 5</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="checkbox_input">
+                                                        <label for="passengers_radio3"><input type="radio" id="passengers_radio3" name="passengers" value="4"/> 4</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="checkbox_input">
+                                                        <label for="passengers_radio4"><input type="radio" id="passengers_radio4" name="passengers" value="7+" /> 7 or more</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="sb_widget" data-aos="fade-up" data-aos-delay="100">
+                                            <div class="form_item">
+                                                <select name="color">
+                                                    <option data-display="Color">Select A Option</option>
+                                                    <option value="Black">Black</option>
+                                                    <option value="White">White</option>
+                                                    <option value="Others">Others</option>
+                                                </select>
+                                            </div>
+                                            <div class="form_item">
+                                                <select name="fuel">
+                                                    <option data-display="Fuel type">Select A Option</option>
+                                                    <option value="Petrol">Petrol</option>
+                                                    <option value="Diesel">Diesel</option>
+                                                    <option value="CNG">CNG</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="form_item">
+                                                <select name="model">
+                                                    <option data-display="Model Type">Select A Option</option>
+                                                    <option value="Latest">Latest</option>
+                                                    <option value="Other">Other</option>
+
+                                                </select>
+                                            </div>
+                                            <div class="form_item">
+                                                <select name="driver">
+                                                    <option data-display="Driver">Select A Option</option>
+                                                    <option value="With Driver">With Driver</option>
+                                                    <option value="Self">Self</option>
+
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="custom_btn btn_width bg_default_red text-uppercase">
+                                            Book A Car <img src="../static/assets/images/icons/icon_01.png" alt="icon_not_found" />
+                                            </button>
+
+
+                                    </form>
+                                </div>
+                            </aside>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-10 col-xs-12">
+                            <div class="car_choose_carousel mb_30 clearfix">
+                                <div class="thumbnail_carousel" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="item">
+                                        <div class="item_head">
+                                            <h4 class="item_title mb-0">{{post.name}}</h4>
+                                            <ul class="review_text ul_li_right clearfix">
+                                                <li class="text-right"><strong>Super</strong> <small>24+ Reviews</small></li>
+                                                <li><span class="bg_default_blue">4.8/5</span></li>
+                                            </ul>
+                                        </div>
+                                         {% if post.images %}
+                                                <img src="{{ url_for('static', filename='uploads/' + post.images.split(',')[0]) }}" alt="{{ post.name }}">
+                                            {% else %}
+                                                <img src="{{ url_for('static', filename='placeholder.jpg') }}" alt="Placeholder Image">
+                                            {% endif %}
+                                        <ul class="btns_group ul_li_center clearfix">
+                                            <li>
+                                                <span class="custom_btn btn_width bg_default_blue"> Rs.{{post.rent}}/Day</span>
+                                            </li>
+                                            <li>
+                                                <a  class="custom_btn btn_width bg_default_red text-uppercase">Please Fill All Fields </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="item">
+                                        <div class="item_head">
+                                            <h4 class="item_title mb-0">{{post.name}}</h4>
+                                            <ul class="review_text ul_li_right clearfix">
+                                                <li class="text-right"><strong>Super</strong> <small>24+ Reviews</small></li>
+                                                <li><span class="bg_default_blue">4.8/5</span></li>
+                                            </ul>
+                                        </div>
+                                            {% if post.images %}
+                                                <img src="{{ url_for('static', filename='uploads/' + post.images.split(',')[1]) }}" alt="{{ post.name }}">
+                                            {% else %}
+                                                <img src="{{ url_for('static', filename='placeholder.jpg') }}" alt="Placeholder Image">
+                                            {% endif %}                                        <ul class="btns_group ul_li_center clearfix">
+                                            <li>
+                                                <span class="custom_btn btn_width bg_default_blue">Rs.{{post.rent}}/Day</span>
+                                            </li>
+                                            <li>
+                                                <a  class="custom_btn btn_width bg_default_red text-uppercase">Please Fill All Fields </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="item">
+                                        <div class="item_head">
+                                            <h4 class="item_title mb-0">{{post.name}}</h4>
+                                            <ul class="review_text ul_li_right clearfix">
+                                                <li class="text-right"><strong>Super</strong> <small>24+ Reviews</small></li>
+                                                <li><span class="bg_default_blue">4.8/5</span></li>
+                                            </ul>
+                                        </div>
+                                            {% if post.images %}
+                                                <img src="{{ url_for('static', filename='uploads/' + post.images.split(',')[2]) }}" alt="{{ post.name }}">
+                                            {% else %}
+                                                <img src="{{ url_for('static', filename='placeholder.jpg') }}" alt="Placeholder Image">
+                                            {% endif %}                                        <ul class="btns_group ul_li_center clearfix">
+                                            <li>
+                                                <span class="custom_btn btn_width bg_default_blue">Rs.{{post.rent}}/Day</span>
+                                            </li>
+                                            <li>
+                                                <a  class="custom_btn btn_width bg_default_red text-uppercase">Please Fill All Fields </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="item">
+                                        <div class="item_head">
+                                            <h4 class="item_title mb-0">{{post.name}}</h4>
+                                            <ul class="review_text ul_li_right clearfix">
+                                                <li class="text-right"><strong>Super</strong> <small>24+ Reviews</small></li>
+                                                <li><span class="bg_default_blue">4.8/5</span></li>
+                                            </ul>
+                                        </div>
+                                        {% if post.images %}
+                                                <img src="{{ url_for('static', filename='uploads/' + post.images.split(',')[3]) }}" alt="{{ post.name }}">
+                                            {% else %}
+                                                <img src="{{ url_for('static', filename='placeholder.jpg') }}" alt="Placeholder Image">
+                                            {% endif %}
+                                        <ul class="btns_group ul_li_center clearfix">
+                                            <li>
+                                                <span class="custom_btn btn_width bg_default_blue">Rs.{{post.rent}}/Day</span>
+                                            </li>
+                                            <li>
+                                                <a  class="custom_btn btn_width bg_default_red text-uppercase">Please Fill All Fields </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                                <div class="thumbnail_carousel_nav" data-aos="fade-up" data-aos-delay="100">
+                                    {% if post.images %}
+                                    <div class="item"><img src="{{ url_for('static', filename='uploads/' + post.images.split(',')[0]) }}" alt="{{ post.name }}"></div>
+                                    <div class="item"><img src="{{ url_for('static', filename='uploads/' + post.images.split(',')[1]) }}" alt="{{ post.name }}"></div>
+                                    <div class="item"><img src="{{ url_for('static', filename='uploads/' + post.images.split(',')[2]) }}" alt="{{ post.name }}"></div>
+                                    <div class="item"><img src="{{ url_for('static', filename='uploads/' + post.images.split(',')[3]) }}" alt="{{ post.name }}"></div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="car_choose_content">
+                                <ul class="info_list ul_li_block mb_15 clearfix" data-aos="fade-up" data-aos-delay="100">
+                                    <li><strong>Passengers:</strong> {{post.capacity}}</li>
+                                    <li><strong>Suitcase:</strong> 1 Large, 2 Small</li>
+
+                                    <li><strong>Engine:</strong> {{post.engine}} CC</li>
+                                    <li><strong>Fuel Type:</strong> {{post.fuel}}, Premium unleaded</li>
+                                    <li><strong>Options:</strong> Cruise Control, MP3 player, {{post.ac}}, Wifi, GPS Navigation</li>
+                                </ul>
+                                <div data-aos="fade-up" data-aos-delay="200">
+                                    <a class="terms_condition" href="../static/#!"><i class="fas fa-info-circle mr-1"></i> Terms and conditions</a>
+                                </div>
+                                <hr data-aos="fade-up" data-aos-delay="300" />
+                                <div class="rent_details_info">
+                                    <h4 class="list_title" data-aos="fade-up" data-aos-delay="100">Rent Details:</h4>
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                            <ul class="info_list ul_li_block mb_15 clearfix" data-aos="fade-up" data-aos-delay="200">
+                                                <li><i class="fas fa-id-card"></i> Payment Guarantee</li>
+                                                <li><i class="fas fa-business-time"></i> Protect Your Rental</li>
+                                                <li><i class="fas fa-business-time"></i> Receipt by Email</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                            <ul class="info_list ul_li_block mb_15 clearfix" data-aos="fade-up" data-aos-delay="300">
+                                                <li><i class="fas fa-user-friends"></i> Car Sharing</li>
+                                                <li><i class="fas fa-language"></i> Multilanguage Support</li>
+                                                <li><i class="fas fa-money-bill"></i> Payment Options</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr data-aos="fade-up" data-aos-delay="100" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="cars_section sec_ptb_100 clearfix">
+                <div class="offers_car_carousel slideshow4_slider" data-aos="fade-up" data-aos-delay="100">
+                    <div class="item">
+                        <div class="gallery_fullimage_2">
+                            <img src="../static/assets/images/gallery/img_03.jpg" alt="image_not_found" />
+                            <div class="item_content text-white">
+                                <span class="item_price bg_default_blue">$670/Day</span>
+                                <h3 class="item_title text-white">Phasellus porta pulvinar metus</h3>
+                                <a class="text_btn text-uppercase" href="../static/#!"><span>Kook A Car</span> <img src="../static/assets/images/icons/icon_02.png" alt="icon_not_found" /></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="gallery_fullimage_2">
+                            <img src="../static/assets/images/gallery/img_04.jpg" alt="image_not_found" />
+                            <div class="item_content text-white">
+                                <span class="item_price bg_default_blue">$670/Day</span>
+                                <h3 class="item_title text-white">Phasellus porta pulvinar metus</h3>
+                                <a class="text_btn text-uppercase" href="../static/#!"><span>Kook A Car</span> <img src="../static/assets/images/icons/icon_02.png" alt="icon_not_found" /></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="gallery_fullimage_2">
+                            <img src="../static/assets/images/gallery/img_05.jpg" alt="image_not_found" />
+                            <div class="item_content text-white">
+                                <span class="item_price bg_default_blue">$670/Day</span>
+                                <h3 class="item_title text-white">Phasellus porta pulvinar metus</h3>
+                                <a class="text_btn text-uppercase" href="../static/#!"><span>Kook A Car</span> <img src="../static/assets/images/icons/icon_02.png" alt="icon_not_found" /></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="gallery_fullimage_2">
+                            <img src="../static/assets/images/gallery/img_06.jpg" alt="image_not_found" />
+                            <div class="item_content text-white">
+                                <span class="item_price bg_default_blue">$670/Day</span>
+                                <h3 class="item_title text-white">Phasellus porta pulvinar metus</h3>
+                                <a class="text_btn text-uppercase" href="../static/#!"><span>Kook A Car</span> <img src="../static/assets/images/icons/icon_02.png" alt="icon_not_found" /></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="gallery_fullimage_2">
+                            <img src="../static/assets/images/gallery/img_03.jpg" alt="image_not_found" />
+                            <div class="item_content text-white">
+                                <span class="item_price bg_default_blue">$670/Day</span>
+                                <h3 class="item_title text-white">Phasellus porta pulvinar metus</h3>
+                                <a class="text_btn text-uppercase" href="../static/#!"><span>Kook A Car</span> <img src="../static/assets/images/icons/icon_02.png" alt="icon_not_found" /></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+      {% endblock %}

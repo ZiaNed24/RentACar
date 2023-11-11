@@ -1,0 +1,133 @@
+{% extends "admin/admin.html" %}
+
+{% block body %}
+
+
+  <section class="content-main">
+
+    <div class="content-header">
+      <h2 class="content-title">Order detail</h2>
+    </div>
+
+
+        <div class="card">
+          <header class="card-header">
+            <div class="row align-items-center">
+              <div class="col-lg-6 col-md-6">
+                <span>
+                  <i class="material-icons md-calendar_today"></i> <b>{{data.date}}</b>
+                </span> <br>
+                <small class="text-muted">Order ID: {{data.id}}</small>
+              </div>
+              <form method="POST" action="/admin/update_status">
+                <div class="col-lg-6 col-md-6 ms-auto text-md-end">
+                  <input type="hidden" name="data_id" value="{{ data.id }}">
+                <select name="new_status" class="form-select d-inline-block" style="max-width: 200px">
+                  <option value="Pending">Pending</option>
+                  <option value="Confirmed">Confirmed</option>
+                  <option value="Declined">Declined</option>
+
+                </select>
+                <button class="btn btn-light"> Save</button>
+              </div>
+              </form>
+
+            </div>
+          </header> <!-- card-header end// -->
+          <div class="card-body">
+
+            <div class="row mb-5 order-info-wrap">
+              <div class="col-md-4">
+                <article class="icontext align-items-start">
+                  <span class="icon icon-sm rounded-circle bg-primary-light">
+                    <i class="text-primary material-icons md-person"></i>
+                  </span>
+                  <div class="text">
+                    <h6 class="mb-1">Customer</h6> 
+                    <p class="mb-1">
+                      {{data.name}} <br> {{data.email}} <br> {{data.phone}}
+                    </p>
+                  </div>
+                </article> 
+              </div> <!-- col// -->
+              <div class="col-md-4">
+                <article class="icontext align-items-start">
+                  <span class="icon icon-sm rounded-circle bg-primary-light">
+                    <i class="text-primary material-icons md-local_shipping"></i>
+                  </span>
+                  <div class="text">
+                    <h6 class="mb-1">Order info</h6> 
+                    <p class="mb-1">
+                      Start: {{data.p_locat}}  <br> Passengers: {{data.passengers}}  <br> Status: {{data.status}}
+                    </p>
+                    <a href="../static/#">Download info</a>
+                  </div>
+                </article> 
+              </div> <!-- col// -->
+              <div class="col-md-4">
+                <article class="icontext align-items-start">
+                  <span class="icon icon-sm rounded-circle bg-primary-light">
+                    <i class="text-primary material-icons md-place"></i>
+                  </span>
+                  <div class="text">
+                    <h6 class="mb-1">End</h6>
+                    <p class="mb-1">
+                      City:{{data.d_locat}}  <br>Driver:{{data.driver}} <br> Po Box 10000
+                    </p>
+                    <a href="../static/#">View profile</a>
+                  </div>
+                </article> 
+              </div> <!-- col// -->
+            </div> <!-- row // -->
+
+            <div class="row">
+              <div class="col-lg-8">
+                <div class="table-responsive">
+                <table class="table border table-hover table-lg">
+                  <thead>
+                    <tr>
+                      <th width="40%">Car</th>
+                      <th width="20%">Color</th>
+                      <th width="20%">Model</th>
+                      <th width="20%" class="text-end">Driver</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        {{data.cname}}
+                      </td>
+                      <td> {{data.color}} </td>
+                      <td>{{data.model}}</td>
+                      <td class="text-end">  {{data.driver}}  </td>
+                    </tr>
+
+                  </tbody>
+                </table>
+                </div> <!-- table-responsive// -->
+              </div>  <!-- col// -->
+              <!-- col// -->
+               <div class="col-lg-4">
+                <div class="box shadow-sm bg-light">
+                   <h6>Send Email</h6>
+
+                </div>
+                 <form action="/admin/confirm" method="post">
+                   <div class="h-25 pt-4">
+
+                  <button type="submit" name="send_email" class="btn btn-primary">Send Email</button>
+                </div>
+                 </form>
+
+              </div>
+            </div>
+          </div> <!-- card-body end// -->
+        </div> <!-- card end// -->
+
+
+
+  </section> <!-- content-main end// -->
+</main>
+
+
+{% endblock %}

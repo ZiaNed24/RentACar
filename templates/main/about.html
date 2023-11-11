@@ -1,0 +1,291 @@
+
+{% extends "main/layout.html" %}
+
+{% block body %}
+
+        <main>
+            <div class="sidebar-menu-wrapper">
+                <div class="mobile_sidebar_menu">
+                    <button type="button" class="close_btn"><i class="fal fa-times"></i></button>
+                    <div class="about_content mb_60">
+                        <div class="brand_logo mb_15">
+                            <a href="../static/index.html"><img src="../static/assets/images/logo/logo_01_1x.png" srcset="assets/images/logo/logo_01_2x.png 2x" alt="logo_not_found" /></a>
+                        </div>
+                        <p class="mb-0">
+                            Nullam id dolor auctor, dignissim magna eu, mattis ante. Pellentesque tincidunt, elit a facilisis efficitur, nunc nisi scelerisque enim, rhoncus malesuada est velit a nulla. Cras porta mi vitae dolor tristique
+                            euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                        </p>
+                    </div>
+                    <div class="menu_list mb_60 clearfix">
+                        <h3 class="title_text text-white">Menu List</h3>
+                        <ul class="ul_li_block clearfix">
+                            <li class="active dropdown">
+                                <a href="../static/#!" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="../static/index_1.html">Home Page V.1</a></li>
+                                    <li><a href="../static/index_2.html">Home Page V.2</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="../static/gallery.html">Our Cars</a></li>
+                            <li><a href="../static/review.html">Reviews</a></li>
+                            <li><a href="../static/about.html">About</a></li>
+                            <li class="dropdown">
+                                <a href="../static/#!" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="../static/service.html">Our Service</a></li>
+                                    <li><a href="../static/gallery.html">Car Gallery</a></li>
+                                    <li><a href="../static/account.html">My Account</a></li>
+                                    <li><a href="../static/reservation.html">Reservation</a></li>
+                                    <li class="dropdown">
+                                        <a href="../static/#!" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blogs</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="../static/blog.html">Blog</a></li>
+                                            <li><a href="../static/blog_details.html">Blog Details</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="../static/#!" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Our Cars</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="../static/car.html">Cars</a></li>
+                                            <li><a href="../static/car_details.html">Car Details</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="../static/cart.html">Shopping Cart</a></li>
+                                    <li><a href="../static/faq.html">F.A.Q.</a></li>
+                                    <li><a href="../static/login.html">Login</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="../static/#!" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contact Us</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="../static/contact.html">Contact Default</a></li>
+                                    <li><a href="../static/contact_wordwide.html">Contact Wordwide</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="booking_car_form">
+                        <h3 class="title_text text-white mb-2">Book A Car</h3>
+                        <p class="mb_15">Nullam id dolor auctor, dignissim magna eu, mattis ante. Pellentesque tincidunt, elit a facilisis efficitur.</p>
+                        <form action="#">
+                            <div class="form_item">
+                                <h4 class="input_title text-white">Pick Up Location</h4>
+                                <div class="position-relative">
+                                    <input id="location_one" type="text" name="location" placeholder="City, State or Airport Code" /> <label for="location_one" class="input_icon"><i class="fas fa-map-marker-alt"></i></label>
+                                </div>
+                            </div>
+                            <div class="form_item">
+                                <h4 class="input_title text-white">Pick A Date</h4>
+                                <input type="date" name="date" />
+                            </div>
+                            <button type="submit" class="custom_btn bg_default_red btn_width text-uppercase">Book A Car <img src="../static/assets/images/icons/icon_01.png" alt="icon_not_found" /></button>
+                        </form>
+                    </div>
+                </div>
+                <div class="overlay"></div>
+            </div>
+            <section class="breadcrumb_section text-center clearfix">
+                <div class="page_title_area has_overlay d-flex align-items-center clearfix" data-bg-image="../static/assets/images/breadcrumb/bg_05.jpg" style="height: 400px;">
+                    <div class="overlay"></div>
+                    <div class="container" data-aos="fade-up" data-aos-delay="100"><h1 class="page_title text-white mb-0">Abouts Us</h1></div>
+                </div>
+                <div class="breadcrumb_nav clearfix" data-bg-color="#F2F2F2">
+                    <div class="container">
+                        <ul class="ul_li clearfix">
+                            <li><a href="../static/index.html">Home</a></li>
+                            <li>About</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="service_section sec_ptb_150 clearfix">
+                <div class="container">
+                    <div class="section_title mb_30 text-center" data-aos="fade-up" data-aos-delay="100">
+                        <h2 class="title_text mb-0"><span>Why Usd</span></h2>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <div class="service_primary text-center" data-aos="fade-up" data-aos-delay="100">
+                                <div class="item_icon"><i class="far fa-shield-alt"></i></div>
+                                <h3 class="item_title">Secured Payment Guarantee</h3>
+                                <p class="mb-0">Vestibulum at ultrices elit. Maecenas faucibus vulputate vestibulum</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <div class="service_primary text-center" data-aos="fade-up" data-aos-delay="300">
+                                <div class="item_icon"><i class="fal fa-headset"></i></div>
+                                <h3 class="item_title">Help Center & Support 24/7</h3>
+                                <p class="mb-0">Vestibulum at ultrices elit. Maecenas faucibus vulputate vestibulum</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <div class="service_primary text-center" data-aos="fade-up" data-aos-delay="500">
+                                <div class="item_icon"><i class="far fa-shield-alt"></i></div>
+                                <h3 class="item_title">Booking any Class Vehicles</h3>
+                                <p class="mb-0">Vestibulum at ultrices elit. Maecenas faucibus vulputate vestibulum</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <div class="service_primary text-center" data-aos="fade-up" data-aos-delay="100">
+                                <div class="item_icon"><i class="fas fa-briefcase"></i></div>
+                                <h3 class="item_title">Corporate and Business Services</h3>
+                                <p class="mb-0">Vestibulum at ultrices elit. Maecenas faucibus vulputate vestibulum</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <div class="service_primary text-center" data-aos="fade-up" data-aos-delay="300">
+                                <div class="item_icon"><i class="fas fa-user-plus"></i></div>
+                                <h3 class="item_title">Car Sharing Options</h3>
+                                <p class="mb-0">Vestibulum at ultrices elit. Maecenas faucibus vulputate vestibulum</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <div class="service_primary text-center" data-aos="fade-up" data-aos-delay="500">
+                                <div class="item_icon"><i class="fas fa-gem"></i></div>
+                                <h3 class="item_title">Limousine and Chauffeur Hire</h3>
+                                <p class="mb-0">Vestibulum at ultrices elit. Maecenas faucibus vulputate vestibulum</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="gallery_section clearfix">
+                <div class="updown_style_wrap minus_bottom">
+                    <div class="updown_style">
+                        <div class="gallery_fullimage" data-aos="fade-up" data-aos-delay="100">
+                            <img src="../static/assets/images/blog/img_07.jpg" alt="image_not_found" />
+                            <div class="item_content text-white">
+                                <h3 class="item_title text-white">Phasellus porta pulvinar metus</h3>
+                                <p>Phasellus porta pulvinar metus, sit amet bibendum lectus hendrerit vel. Duis ullamcorper, justo quis hendrerit venenatis, purus mi volutpat dui, vel commodo urna eros eget sapien</p>
+                                <a class="text_btn text-uppercase" href="../static/#!"><span>Find A Car</span> <img src="../static/assets/images/icons/icon_02.png" alt="icon_not_found" /></a>
+                            </div>
+                        </div>
+                        <div class="gallery_fullimage" data-aos="fade-up" data-aos-delay="300">
+                            <img src="../static/assets/images/blog/img_08.jpg" alt="image_not_found" />
+                            <div class="item_content text-white">
+                                <h3 class="item_title text-white">Phasellus porta pulvinar metus</h3>
+                                <p>Phasellus porta pulvinar metus, sit amet bibendum lectus hendrerit vel. Duis ullamcorper, justo quis hendrerit venenatis, purus mi volutpat dui, vel commodo urna eros eget sapien</p>
+                                <a class="text_btn text-uppercase" href="../static/#!"><span>Find A Car</span> <img src="../static/assets/images/icons/icon_02.png" alt="icon_not_found" /></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="updown_style">
+                        <div class="gallery_fullimage" data-aos="fade-up" data-aos-delay="100">
+                            <img src="../static/assets/images/blog/img_01.jpg" alt="image_not_found" />
+                            <div class="item_content text-white">
+                                <h3 class="item_title text-white">Phasellus porta pulvinar metus</h3>
+                                <p>Phasellus porta pulvinar metus, sit amet bibendum lectus hendrerit vel. Duis ullamcorper, justo quis hendrerit venenatis, purus mi volutpat dui, vel commodo urna eros eget sapien</p>
+                                <a class="text_btn text-uppercase" href="../static/#!"><span>Find A Car</span> <img src="../static/assets/images/icons/icon_02.png" alt="icon_not_found" /></a>
+                            </div>
+                        </div>
+                        <div class="gallery_fullimage" data-aos="fade-up" data-aos-delay="300">
+                            <img src="../static/assets/images/blog/img_09.jpg" alt="image_not_found" />
+                            <div class="item_content text-white">
+                                <h3 class="item_title text-white">Phasellus porta pulvinar metus</h3>
+                                <p>Phasellus porta pulvinar metus, sit amet bibendum lectus hendrerit vel. Duis ullamcorper, justo quis hendrerit venenatis, purus mi volutpat dui, vel commodo urna eros eget sapien</p>
+                                <a class="text_btn text-uppercase" href="../static/#!"><span>Find A Car</span> <img src="../static/assets/images/icons/icon_02.png" alt="icon_not_found" /></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="funfact_section sec_ptb_150 clearfix" data-bg-gradient="linear-gradient(0deg, #0C0C0F, #292D45)">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                            <div class="funfact_item text-center text-white" data-aos="fade-up" data-aos-delay="100">
+                                <h3 class="counter_text text-white mb-0"><span class="counter">500</span>+</h3>
+                                <small class="line bg_default_red"></small>
+                                <p class="item_title mb-0">Worldwide Rent Stations</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                            <div class="funfact_item text-center text-white" data-aos="fade-up" data-aos-delay="300">
+                                <h3 class="counter_text text-white mb-0"><span class="counter">3500</span>+</h3>
+                                <small class="line bg_default_red"></small>
+                                <p class="item_title mb-0">Cars of various categories</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                            <div class="funfact_item text-center text-white" data-aos="fade-up" data-aos-delay="500">
+                                <h3 class="counter_text text-white mb-0"><span class="counter">180</span>+</h3>
+                                <small class="line bg_default_red"></small>
+                                <p class="item_title mb-0">Business Partners</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="testimonial_section sec_ptb_150 clearfix">
+                <div class="container">
+                    <div class="section_title mb_60 text-center" data-aos="fade-up" data-aos-delay="100">
+                        <h2 class="title_text mb-0"><span>Recent Reviews</span></h2>
+                    </div>
+                    <div class="testimonial_carousel_wrap position-relative">
+                        <div class="testimonial_carousel" data-slick='{"dots": false}' data-aos="fade-up" data-aos-delay="300">
+                            <div class="item">
+                                <div class="testimonial_item2 text-center">
+                                    <p class="mb_30">
+                                        “Ut id lobortis eros, sed finibus dui. Cras eget purus lacus. Suspendisse sodales massa quis turpis ultrices ultricies. Cras euismod eros at vehicula sagittis. Suspendisse condimentum tortor nec enim
+                                        pellentesque feugiat. Nulla tempor urna vitae sapien iaculis, auctor condimentum enim auctor”
+                                    </p>
+                                    <div class="admin_info">
+                                        <div class="admin_image"><img src="../static/assets/images/meta/img_01.png" alt="image_not_found" /></div>
+                                        <h4 class="admin_name">Marianna Frazoni</h4>
+                                        <ul class="rating_star ul_li_center clearfix">
+                                            <li class="active"><i class="fas fa-star"></i></li>
+                                            <li class="active"><i class="fas fa-star"></i></li>
+                                            <li class="active"><i class="fas fa-star"></i></li>
+                                            <li class="active"><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="testimonial_item2 text-center">
+                                    <p class="mb_30">
+                                        “Ut id lobortis eros, sed finibus dui. Cras eget purus lacus. Suspendisse sodales massa quis turpis ultrices ultricies. Cras euismod eros at vehicula sagittis. Suspendisse condimentum tortor nec enim
+                                        pellentesque feugiat. Nulla tempor urna vitae sapien iaculis, auctor condimentum enim auctor”
+                                    </p>
+                                    <div class="admin_info">
+                                        <div class="admin_image"><img src="../static/assets/images/meta/img_01.png" alt="image_not_found" /></div>
+                                        <h4 class="admin_name">Marianna Frazoni</h4>
+                                        <ul class="rating_star ul_li_center clearfix">
+                                            <li class="active"><i class="fas fa-star"></i></li>
+                                            <li class="active"><i class="fas fa-star"></i></li>
+                                            <li class="active"><i class="fas fa-star"></i></li>
+                                            <li class="active"><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="testimonial_item2 text-center">
+                                    <p class="mb_30">
+                                        “Ut id lobortis eros, sed finibus dui. Cras eget purus lacus. Suspendisse sodales massa quis turpis ultrices ultricies. Cras euismod eros at vehicula sagittis. Suspendisse condimentum tortor nec enim
+                                        pellentesque feugiat. Nulla tempor urna vitae sapien iaculis, auctor condimentum enim auctor”
+                                    </p>
+                                    <div class="admin_info">
+                                        <div class="admin_image"><img src="../static/assets/images/meta/img_01.png" alt="image_not_found" /></div>
+                                        <h4 class="admin_name">Marianna Frazoni</h4>
+                                        <ul class="rating_star ul_li_center clearfix">
+                                            <li class="active"><i class="fas fa-star"></i></li>
+                                            <li class="active"><i class="fas fa-star"></i></li>
+                                            <li class="active"><i class="fas fa-star"></i></li>
+                                            <li class="active"><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel_nav position_ycenter">
+                            <button type="button" class="ts_left_arrow"><i class="fal fa-angle-left"></i></button> <button type="button" class="ts_right_arrow"><i class="fal fa-angle-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        {% endblock %}

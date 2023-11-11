@@ -1,0 +1,1459 @@
+@charset "UTF-8";
+/* table of content - start
+==================================================================================================== */
+/* 
+
+Project Name 	:  Rotors – Car Rental HTML5 Template
+File 			:  CSS Base
+Version 		:  1.0.0
+Last change 	:  17 November 2020
+Author 			:  Merkulove (https://themeforest.net/user/merkulove)
+Developer:		:  Rakibul Islam Dewan
+================================================== 
+
+*/
+/* table of content - end
+==================================================================================================== */
+@import url("https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&amp;display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&amp;display=swap");
+/* global area - start
+==================================================================================================== */
+body {
+  margin: 0px;
+  padding: 0px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.65;
+  font-style: normal;
+  color: #1F2B3E;
+  font-family: "Lato", sans-serif;
+  background-color: #000000;
+  background-attachment: fixed;
+  text-rendering: optimizelegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  color: #ffffff;
+  background-color: #EA001E;
+}
+
+::-moz-selection {
+  color: #ffffff;
+  background-color: #EA001E;
+}
+
+main {
+  overflow: hidden;
+  position: relative;
+}
+
+a,
+button {
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+}
+a:hover,
+button:hover {
+  text-decoration: none;
+}
+
+button {
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  background: none;
+}
+button:focus {
+  outline: none;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+[data-bg-image] {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #000C21;
+  font-family: "Goldman", cursive;
+}
+
+hr {
+  height: 1px;
+  width: 100%;
+  border: none;
+  display: block;
+  margin: 30px 0px;
+  background-color: #D8D8D8;
+}
+
+.layer {
+  position: relative !important;
+}
+
+/* bootstrap reset - start
+================================================== */
+.container {
+  max-width: 1200px;
+}
+
+.maxw_1420 {
+  max-width: 1450px;
+}
+
+.container-fluid {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+/* bootstrap reset - end
+================================================== */
+/* slick slider settings - start
+================================================== */
+.slick-dots {
+  left: 50%;
+  bottom: 0px;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  max-width: 1200px;
+  padding: 0px 15px;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-50%);
+}
+.slick-dots li {
+  width: auto;
+  height: auto;
+  margin: 0px;
+  padding: 0px;
+  float: left;
+}
+.slick-dots li:not(:last-child) {
+  margin-right: 10px;
+}
+.slick-dots li button {
+  width: 20px;
+  height: 8px;
+  border: 0px;
+  padding: 0px;
+  opacity: 0.3;
+  border-radius: 0px;
+  background: #EA001E;
+}
+.slick-dots li:hover button, .slick-dots li.slick-active button {
+  opacity: 1;
+}
+
+.slick-dotted.slick-slider {
+  margin-bottom: 0px;
+}
+
+.slick-arrow {
+  color: transparent;
+  text-align: center;
+}
+.slick-arrow:before {
+  font-weight: 400;
+  color: #EA001E;
+  display: inline-block;
+  font-family: "Font Awesome 5 Pro";
+}
+
+.slick-prev:before {
+  content: "";
+}
+
+.slick-next:before {
+  content: "";
+}
+
+.carousel_nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel_nav button {
+  line-height: 1;
+  font-size: 36px;
+  color: #1F2B3E;
+}
+.carousel_nav button:not(:last-child) {
+  margin-right: 10px;
+}
+.carousel_nav button:hover {
+  color: #EA001E;
+}
+
+/* slick slider settings - end
+================================================== */
+/* list style settings - start 
+================================================== */
+.ul_li,
+.ul_li_right,
+.ul_li_center {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.ul_li > li,
+.ul_li_right > li,
+.ul_li_center > li {
+  float: left;
+  list-style: none;
+  display: inline-block;
+}
+
+.ul_li {
+  justify-content: flex-start;
+}
+
+.ul_li_center {
+  justify-content: center;
+}
+
+.ul_li_right {
+  justify-content: flex-end;
+}
+
+.ul_li_block {
+  margin: 0px;
+  padding: 0px;
+  display: block;
+}
+.ul_li_block > li {
+  display: block;
+  list-style: none;
+}
+
+/* list style settings - end
+================================================== */
+/* padding & margin setting - start 
+================================================== */
+.sec_ptb_150 {
+  padding: 150px 0px;
+}
+
+.sec_ptb_100 {
+  padding: 100px 0px;
+}
+
+.mt__30 {
+  margin-top: -30px;
+}
+
+.mb_15 {
+  margin-bottom: 15px;
+}
+
+.mb_30 {
+  margin-bottom: 30px;
+}
+
+.mb_60 {
+  margin-bottom: 60px;
+}
+
+.mb_100 {
+  margin-bottom: 100px;
+}
+
+/* padding & margin setting - end
+================================================== */
+/* button style - start
+================================================== */
+.custom_btn {
+  color: #ffffff;
+  line-height: 1;
+  font-size: 13px;
+  font-weight: 700;
+  min-height: 60px;
+  min-width: 230px;
+  padding: 10px 30px;
+  border-radius: 4px;
+  text-align: center;
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  text-transform: uppercase;
+  font-family: "Goldman", cursive;
+  transition: 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.custom_btn:hover {
+  color: #ffffff;
+}
+.custom_btn.btn_width {
+  min-width: 330px;
+}
+.custom_btn.btn_bordered {
+  border: 2px solid transparent;
+}
+.custom_btn.border_red {
+  color: #EA001E;
+  border-color: #EA001E;
+}
+.custom_btn.border_red:hover {
+  color: #ffffff;
+  background-color: #EA001E;
+}
+.custom_btn img {
+  margin-left: 10px;
+  display: inline-block;
+}
+.custom_btn.bg_default_red:hover {
+  background-color: #a50015;
+}
+.custom_btn.bg_default_black:hover {
+  background-color: #000817;
+}
+
+/* button style - end
+================================================== */
+/* title text - start
+================================================== */
+.section_title {
+  z-index: 1;
+  position: relative;
+}
+.section_title .title_text {
+  font-size: 42px;
+}
+.section_title .small_title {
+  display: block;
+  line-height: 1;
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #EA001E;
+}
+.section_title .number_text {
+  display: block;
+  line-height: 0.7;
+  font-size: 120px;
+  margin-bottom: 20px;
+  color: #EA001E;
+}
+
+.big_title {
+  top: 60%;
+  width: 100%;
+  display: block;
+  line-height: 1;
+  font-size: 160px;
+  font-weight: 800;
+  position: absolute;
+  color: rgba(255, 255, 255, 0.04);
+}
+
+/* title text - end
+================================================== */
+/* back to top - start
+================================================== */
+#thetop {
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  position: absolute;
+}
+
+.backtotop {
+  right: 15px;
+  width: 50px;
+  height: 50px;
+  z-index: 999;
+  bottom: 40px;
+  display: none;
+  position: fixed;
+  border-radius: 100%;
+  background-color: #EA001E;
+  box-shadow: 0px 10px 30px 1px rgba(234, 0, 30, 0.3);
+}
+.backtotop .scroll {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: block;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 50px;
+  text-align: center;
+  position: relative;
+}
+
+/* back to top - end
+================================================== */
+/* preloader - start
+================================================== */
+.preloader {
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: flex;
+  z-index: 9000;
+  cursor: default;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+}
+.preloader.loaded {
+  visibility: hidden;
+}
+.preloader .animation_preloader {
+  z-index: 10000;
+}
+.preloader .spinner {
+  width: 9em;
+  height: 9em;
+  margin: auto;
+  margin-bottom: 30px;
+  border-radius: 100%;
+  animation: spinner 1s infinite linear;
+  border: 3px solid rgba(255, 255, 255, 0.8);
+  border-top-color: #EA001E;
+}
+.preloader p {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+.preloader .loader {
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+  position: fixed;
+  pointer-events: none;
+}
+.preloader .loader_section {
+  padding: 0px;
+}
+.preloader .bg {
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000C21;
+  transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
+}
+.preloader.loaded .animation_preloader {
+  opacity: 0;
+  transition: 0.3s ease-out;
+}
+.preloader.loaded .loader_section .bg {
+  width: 0;
+  transition: 0.7s 0.3s allcubic-bezier(0.1, 0.1, 0.1, 1);
+}
+@keyframes spinner {
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+@media screen and (max-width: 767px) {
+  .preloader .animation_preloader .spinner {
+    height: 8em;
+    width: 8em;
+  }
+}
+@media screen and (max-width: 500px) {
+  .preloader .animation_preloader .spinner {
+    height: 7em;
+    width: 7em;
+  }
+}
+/* preloader - end
+================================================== */
+/* custom colors - start
+================================================== */
+.has_overlay {
+  z-index: 1;
+  position: relative;
+}
+.has_overlay .overlay {
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: -1;
+  position: absolute;
+}
+
+.bg_default_red {
+  background-color: #EA001E;
+}
+
+.bg_default_blue {
+  background-color: #0048B9;
+}
+
+.bg_default_black {
+  background-color: #000C21;
+}
+
+/* custom colors - end
+================================================== */
+/* section decorations - start
+================================================== */
+.deco_wrap {
+  z-index: 1;
+  position: relative;
+}
+.deco_wrap .deco_image {
+  z-index: -1;
+  position: absolute;
+}
+
+/* section decorations - end
+================================================== */
+/* transition - start
+================================================== */
+a,
+button {
+  transition: 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* transition - end
+================================================== */
+/* global area - end
+==================================================================================================== */
+/* header - start
+==================================================================================================== */
+/* header sticky - start */
+.sticky {
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: auto;
+  z-index: 999;
+  padding: 30px 0px;
+  position: absolute;
+}
+.sticky.stuck {
+  position: fixed;
+  padding: 15px 0px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 18px 1px rgba(0, 0, 0, 0.08);
+  animation: 0.5s ease-in-out 0s normal none 1 running fadeInDown;
+}
+
+/* header sticky - end */
+/* header brand logo - start */
+.header_section .brand_logo img:nth-child(2) {
+  display: none;
+}
+.header_section.stuck .brand_logo img:nth-child(1) {
+  display: none;
+}
+.header_section.stuck .brand_logo img:nth-child(2) {
+  display: inline-block;
+}
+.header_section .mobile_sidebar_btn {
+  display: none;
+  color: #ffffff;
+  font-size: 24px;
+}
+.header_section.stuck .mobile_sidebar_btn {
+  color: #000C21;
+}
+.header_section.stuck .mobile_sidebar_btn:hover {
+  color: #EA001E;
+}
+
+/* header brand logo - end */
+/* main menubar - start */
+.main_menu li:not(:last-child) {
+  margin-right: 50px;
+}
+.main_menu a {
+  padding: 0px;
+  color: #ffffff;
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+}
+.main_menu a:hover, .main_menu a.active {
+  color: #EA001E;
+}
+
+.stuck .main_menu a {
+  color: #1F2B3E;
+}
+.stuck .main_menu a:hover, .stuck .main_menu a.active {
+  color: #EA001E;
+}
+
+/* main menubar - end */
+/* sidebar mobile menu - start */
+.sidebar-menu-wrapper {
+  display: block;
+}
+.sidebar-menu-wrapper .close_btn {
+  top: 20px;
+  right: 25px;
+  line-height: 1;
+  color: #ffffff;
+  font-size: 18px;
+  position: absolute;
+}
+.sidebar-menu-wrapper .close_btn:hover {
+  color: #EA001E;
+}
+.sidebar-menu-wrapper .title_text {
+  line-height: 1;
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+.sidebar-menu-wrapper .overlay {
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  opacity: 0;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  position: fixed;
+  transition: 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  background: rgba(10, 41, 96, 0.57);
+}
+.sidebar-menu-wrapper .overlay.active {
+  opacity: 1;
+  display: block;
+}
+
+.mobile_sidebar_menu {
+  top: 0px;
+  right: -320px;
+  width: 300px;
+  height: 100vh;
+  z-index: 9999;
+  color: #ffffff;
+  position: fixed;
+  padding: 50px 30px;
+  overflow-y: scroll;
+  background-color: #000C21;
+  transition: 0.6s cubic-bezier(1, 0, 0, 1);
+}
+.mobile_sidebar_menu.active {
+  right: 0px;
+}
+.mobile_sidebar_menu .mCustomScrollBox {
+  overflow: visible !important;
+}
+.mobile_sidebar_menu .mb_60 {
+  margin-bottom: 40px;
+}
+.mobile_sidebar_menu .menu_list li, .mobile_sidebar_menu .menu_list a {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  line-height: 1;
+  display: block;
+}
+.mobile_sidebar_menu .menu_list > ul > li:not(:last-child) {
+  margin-bottom: 20px;
+}
+.mobile_sidebar_menu .menu_list > ul > li > a {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.4);
+}
+.mobile_sidebar_menu .menu_list > ul > li > a:hover, .mobile_sidebar_menu .menu_list > ul > li > a.active {
+  color: #ffffff;
+}
+
+.mobile_sidebar_menu::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* sidebar mobile menu - end */
+/* header - end
+==================================================================================================== */
+/* footer - start
+==================================================================================================== */
+.footer_section {
+  overflow: hidden;
+  position: relative;
+}
+.footer_section .shape_1 {
+  top: 80px;
+  left: -36px;
+}
+.footer_section .shape_2 {
+  top: 100px;
+  right: -50px;
+}
+.footer_section .shape_3 {
+  left: 10%;
+  bottom: 100px;
+}
+.footer_section .shape_4 {
+  right: 16%;
+  bottom: 50px;
+}
+.footer_section .shape_5 {
+  top: 80px;
+  left: 30%;
+}
+.footer_section h2 {
+  font-size: 54px;
+  margin-bottom: 40px;
+  font-family: "Lato", sans-serif;
+}
+.footer_section h2 strong {
+  display: block;
+  font-size: 100px;
+  color: #EA001E;
+  font-family: "Goldman", cursive;
+}
+
+/* footer - end
+==================================================================================================== */
+/* home page - start
+==================================================================================================== */
+/* banner section - start */
+.banner_section {
+  min-height: 100vh;
+}
+.banner_section h1 {
+  font-size: 54px;
+  margin-bottom: 40px;
+  font-family: "Lato", sans-serif;
+}
+.banner_section h1 strong {
+  display: block;
+  font-size: 100px;
+  color: #EA001E;
+  font-family: "Goldman", cursive;
+}
+.banner_section .car_image {
+  top: 50%;
+  right: 0px;
+  position: absolute;
+  transform: translateY(-50%);
+}
+.banner_section .shape_1 {
+  top: 50%;
+  left: 0px;
+  max-width: 66px;
+  transform: translateY(-50%);
+}
+
+.banner_btns_group li:not(:last-child) {
+  margin-right: 20px;
+}
+
+.banner_counter li:not(:last-child) {
+  margin-right: 50px;
+}
+.banner_counter span, .banner_counter small {
+  display: block;
+  line-height: 1;
+}
+.banner_counter span {
+  font-size: 46px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.banner_counter small {
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+
+/* banner section - end */
+/* home demo section - start */
+.home_demo_section .shape_1 {
+  top: 150px;
+  left: -36px;
+}
+.home_demo_section .shape_2 {
+  top: 150px;
+  right: -40px;
+}
+.home_demo_section .shape_3 {
+  top: 35%;
+  left: 150px;
+}
+.home_demo_section .shape_4 {
+  top: 40%;
+  right: 150px;
+}
+.home_demo_section .shape_5 {
+  left: -80px;
+  bottom: 150px;
+}
+.home_demo_section .shape_6 {
+  right: 250px;
+  bottom: 100px;
+}
+
+.home_demo:not(:last-child) {
+  margin-bottom: 100px;
+}
+.home_demo .item_image {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  background-color: #EA001E;
+  box-shadow: 0px 30px 60px 0px rgba(0, 0, 0, 0.5);
+}
+.home_demo .item_image:hover {
+  transform: translateY(-15px);
+}
+.home_demo .item_image img {
+  width: 100%;
+  display: block;
+  transition: 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.home_demo .item_image span {
+  top: 60%;
+  left: 0px;
+  right: 0px;
+  z-index: 1;
+  opacity: 0;
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: 400;
+  text-align: center;
+  position: absolute;
+  font-family: "Goldman", cursive;
+  transition: 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.home_demo:hover .item_image img {
+  opacity: 0.3;
+}
+.home_demo:hover .item_image span {
+  top: 50%;
+  opacity: 1;
+  transform: translateY(-50%);
+}
+.home_demo .item_title {
+  margin: 0px;
+  text-align: center;
+}
+.home_demo .item_title a {
+  color: #ffffff;
+  font-size: 38px;
+}
+.home_demo:hover .item_title a {
+  color: #EA001E;
+}
+
+/* home demo section - end */
+/* inner page section - start */
+.innerpage_item {
+  margin-top: 60px;
+}
+.innerpage_item .item_image {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  background-color: #EA001E;
+  box-shadow: 0px 30px 60px 0px rgba(0, 0, 0, 0.5);
+}
+.innerpage_item .item_image img {
+  width: 100%;
+  display: block;
+  transition: 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.innerpage_item .item_image span {
+  top: 60%;
+  left: 0px;
+  right: 0px;
+  z-index: 1;
+  opacity: 0;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 400;
+  position: absolute;
+  font-family: "Goldman", cursive;
+  transition: 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.innerpage_item:hover .item_image {
+  transform: translateY(-15px);
+}
+.innerpage_item:hover .item_image img {
+  opacity: 0.3;
+}
+.innerpage_item:hover .item_image span {
+  top: 50%;
+  opacity: 1;
+  transform: translateY(-50%);
+}
+.innerpage_item .item_title {
+  margin-top: 15px;
+  font-family: "Lato", sans-serif;
+}
+.innerpage_item .item_title a {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 500;
+}
+.innerpage_item:hover .item_title a {
+  color: #EA001E;
+}
+
+/* inner page section - end */
+/* blog section - start */
+.blog_content .item_title {
+  font-size: 42px;
+}
+
+.blog_image {
+  float: left;
+  width: 700px;
+  margin-bottom: -100px;
+}
+
+/* blog section - end */
+/* widget section - start */
+.widget_section img {
+  margin-top: 40px;
+  box-shadow: 0px 30px 60px 0px rgba(0, 0, 0, 0.5);
+}
+
+/* widget section - end */
+/* features section - start */
+.features_section .shape_1 {
+  top: 150px;
+  left: -36px;
+}
+.features_section .shape_2 {
+  top: 150px;
+  right: -40px;
+}
+.features_section .shape_3 {
+  top: 35%;
+  left: 150px;
+}
+.features_section .shape_4 {
+  top: 40%;
+  right: 150px;
+}
+.features_section .shape_5 {
+  left: -80px;
+  bottom: 150px;
+}
+.features_section .shape_6 {
+  right: 250px;
+  bottom: 100px;
+}
+
+.features_primary {
+  max-width: 370px;
+  margin: 80px auto 0px;
+}
+.features_primary .item_icon {
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  margin-bottom: 25px;
+  border-radius: 15px;
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  background-color: #EA001E;
+  box-shadow: 0px 5px 30px 1px rgba(0, 0, 0, 0.2);
+}
+.features_primary .item_title {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Lato", sans-serif;
+}
+
+/* features section - end */
+/* home page - end
+==================================================================================================== */
+/*
+================================================== 
+*	Project Name 	:  Rotors – Car Rental HTML5 Template
+*	File 			:  CSS Base
+*	Version 		:  1.0.0
+*	Last change 	:  17 November 2020
+*	Author 			:  Merkulove (https://themeforest.net/user/merkulove)
+*	Developer:		:  Rakibul Islam Dewan
+
+*	css code for responsive layout To make Responsive
+==================================================
+*/
+/*  ====================================================================================================
+1 - media screen and (max-width: 1440px) - start
+==================================================================================================== */
+@media screen and (max-width: 1600px) {
+  .banner_section .car_image {
+    right: -45px;
+    max-width: 850px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .custom_btn {
+    min-width: auto;
+    min-height: 55px;
+  }
+
+  .sec_ptb_150 {
+    padding: 120px 0px;
+  }
+
+  .section_title .number_text {
+    font-size: 100px;
+    margin-bottom: 15px;
+  }
+
+  .section_title .title_text {
+    font-size: 36px;
+  }
+
+  .banner_section h1 {
+    font-size: 46px;
+  }
+
+  .banner_counter span {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+
+  .banner_counter small {
+    font-size: 12px;
+  }
+
+  .banner_section .car_image {
+    right: -20px;
+    max-width: 770px;
+  }
+
+  .home_demo_section .shape_1,
+.features_section .shape_1 {
+    top: 130px;
+    max-width: 80px;
+  }
+  .home_demo_section .shape_2,
+.features_section .shape_2 {
+    top: 130px;
+    max-width: 80px;
+  }
+  .home_demo_section .shape_3,
+.features_section .shape_3 {
+    left: 50px;
+    max-width: 70px;
+  }
+  .home_demo_section .shape_4,
+.features_section .shape_4 {
+    right: 50px;
+    max-width: 70px;
+  }
+  .home_demo_section .shape_5,
+.features_section .shape_5 {
+    left: -80px;
+    bottom: 130px;
+    max-width: 150px;
+  }
+  .home_demo_section .shape_6,
+.features_section .shape_6 {
+    right: 80px;
+    bottom: 30px;
+    max-width: 200px;
+  }
+}
+/* ====================================================================================================
+1 - media screen and (max-width: 1440px) - end
+==================================================================================================== */
+/*  ====================================================================================================
+2 - media screen and (max-width: 1280px) - start
+==================================================================================================== */
+/* ====================================================================================================
+2 - media screen and (max-width: 1280px) - end
+==================================================================================================== */
+/*  ====================================================================================================
+3 - media screen and (max-width: 1199px) - start
+==================================================================================================== */
+@media screen and (max-width: 1199px) {
+  .banner_section .car_image {
+    max-width: 670px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .section_title .title_text {
+    font-size: 32px;
+  }
+
+  .banner_section h1 {
+    font-size: 36px;
+  }
+
+  .banner_content {
+    max-width: 470px;
+  }
+
+  .banner_section h1 strong {
+    font-size: 84px;
+  }
+
+  .main_menu li:not(:last-child) {
+    margin-right: 35px;
+  }
+
+  .innerpage_item .item_image span {
+    font-size: 16px;
+  }
+
+  .innerpage_item .item_title a {
+    font-size: 16px;
+  }
+
+  .blog_image {
+    width: 520px;
+  }
+
+  .footer_section h2 {
+    font-size: 42px;
+    margin-bottom: 30px;
+  }
+
+  .footer_section h2 strong {
+    font-size: 84px;
+    margin-bottom: 15px;
+  }
+
+  .footer_section {
+    overflow: hidden;
+    position: relative;
+  }
+  .footer_section .shape_1 {
+    top: 60px;
+    left: -45px;
+    max-width: 60px;
+  }
+  .footer_section .shape_2 {
+    top: 80px;
+    right: -20px;
+    max-width: 70px;
+  }
+  .footer_section .shape_3 {
+    bottom: 70px;
+    max-width: 70px;
+  }
+  .footer_section .shape_4 {
+    bottom: 30px;
+    max-width: 60px;
+  }
+  .footer_section .shape_5 {
+    left: 30%;
+    max-width: 200px;
+  }
+}
+/* ====================================================================================================
+3 - media screen and (max-width: 1199px) - end
+==================================================================================================== */
+/* ====================================================================================================
+4 - media screen and (max-width: 991px) - start
+==================================================================================================== */
+@media screen and (max-width: 991px) {
+  .backtotop {
+    width: 40px;
+    height: 40px;
+  }
+
+  .backtotop .scroll {
+    font-size: 14px;
+    line-height: 42px;
+  }
+
+  .main_menu {
+    display: none;
+  }
+
+  .header_section .custom_btn {
+    display: none;
+  }
+
+  .sticky {
+    padding: 15px 0px;
+  }
+
+  .header_section .mobile_sidebar_btn {
+    display: inline-block;
+  }
+
+  .header_section .brand_logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .banner_content {
+    margin: auto;
+    text-align: center;
+    margin-bottom: 200px;
+  }
+
+  .banner_btns_group,
+.banner_counter {
+    justify-content: center;
+  }
+
+  .banner_section .car_image {
+    top: unset;
+    bottom: -15px;
+    transform: unset;
+  }
+
+  .home_demo .item_title a {
+    font-size: 30px;
+  }
+
+  .blog_content {
+    max-width: 550px;
+    text-align: center;
+    margin: 0px auto 50px;
+  }
+  .blog_content p {
+    font-size: 16px;
+  }
+
+  .blog_image {
+    float: none;
+    width: auto;
+    max-width: 600px;
+    margin: 0px auto -100px;
+  }
+
+  .responsive_image {
+    max-width: 670px;
+    margin: 0px auto;
+  }
+
+  .footer_content {
+    margin: auto;
+    max-width: 570px;
+  }
+}
+@media screen and (max-width: 880px) {
+  .banner_section .car_image {
+    bottom: 0px;
+    max-width: 570px;
+  }
+}
+/* ====================================================================================================
+4 - media screen and (max-width: 991px) - end
+==================================================================================================== */
+/* ====================================================================================================
+5 - media screen and (max-width: 767px) - start
+==================================================================================================== */
+@media screen and (max-width: 767px) {
+  .order-last {
+    order: 0;
+  }
+
+  .section_title.mb_100 {
+    margin-bottom: 60px;
+  }
+
+  .home_demo {
+    margin: auto;
+    max-width: 470px;
+  }
+
+  .home_demo:not(:last-child) {
+    margin-bottom: 50px;
+  }
+
+  .home_demo .item_title {
+    margin-top: 20px;
+  }
+
+  .home_demo .item_title a {
+    font-size: 24px;
+  }
+}
+/* ====================================================================================================
+5 - media screen and (max-width: 767px) - end
+==================================================================================================== */
+/* ====================================================================================================
+6 - media screen and (max-width: 680px) - start
+==================================================================================================== */
+@media screen and (max-width: 680px) {
+  .custom_btn {
+    font-size: 12px;
+    min-height: 45px;
+    padding: 10px 20px;
+  }
+
+  .banner_section .car_image {
+    max-width: 470px;
+  }
+
+  .banner_section h1 {
+    font-size: 26px;
+  }
+
+  .banner_section h1 strong {
+    font-size: 60px;
+  }
+
+  .banner_btns_group {
+    margin-bottom: 40px;
+  }
+
+  .banner_counter span {
+    font-size: 22px;
+  }
+
+  .banner_counter small {
+    font-size: 10px;
+  }
+
+  .banner_counter li:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  .banner_content {
+    margin: auto;
+    max-width: 360px;
+  }
+
+  .banner_section {
+    min-height: auto;
+    padding-top: 150px;
+    padding-bottom: 300px;
+  }
+
+  .banner_section .shape_1 {
+    top: 50%;
+    left: -5px;
+    max-width: 66px;
+    transform: translateY(-50%);
+  }
+
+  .home_demo_section .shape_1,
+.features_section .shape_1 {
+    top: 40px;
+    left: -25px;
+    max-width: 50px;
+  }
+  .home_demo_section .shape_2,
+.features_section .shape_2 {
+    top: 40px;
+    right: -20px;
+    max-width: 50px;
+  }
+  .home_demo_section .shape_3,
+.features_section .shape_3 {
+    left: 20px;
+    max-width: 50px;
+  }
+  .home_demo_section .shape_4,
+.features_section .shape_4 {
+    right: 20px;
+    max-width: 50px;
+  }
+  .home_demo_section .shape_5,
+.features_section .shape_5 {
+    left: -40px;
+    bottom: 50px;
+    max-width: 80px;
+  }
+  .home_demo_section .shape_6,
+.features_section .shape_6 {
+    right: 15px;
+    bottom: 30px;
+    max-width: 150px;
+  }
+}
+/* ====================================================================================================
+6 - media screen and (max-width: 680px) - end
+==================================================================================================== */
+/* ====================================================================================================
+7 - media screen and (max-width: 580px) - start
+==================================================================================================== */
+@media screen and (max-width: 580px) {
+  .footer_section h2 {
+    font-size: 36px;
+  }
+
+  .footer_section h2 strong {
+    font-size: 72px;
+    margin-bottom: 10px;
+  }
+
+  .footer_content {
+    max-width: 430px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .innerpage_item {
+    max-width: 330px;
+    margin: 40px auto 0px;
+  }
+}
+/* ====================================================================================================
+7 - media screen and (max-width: 580px) - end
+==================================================================================================== */
+/* ====================================================================================================
+8 - media screen and (max-width: 480px) - start
+==================================================================================================== */
+@media screen and (max-width: 480px) {
+  .banner_section .car_image {
+    max-width: 350px;
+  }
+
+  .banner_section {
+    padding-bottom: 230px;
+  }
+
+  .footer_section h2 {
+    font-size: 26px;
+  }
+
+  .footer_section h2 strong {
+    font-size: 54px;
+  }
+
+  .footer_content {
+    max-width: 320px;
+  }
+}
+/* ====================================================================================================
+8 - media screen and (max-width: 480px) - end
+==================================================================================================== */
+/* ====================================================================================================
+9 - media screen and (max-width: 320px) - start
+==================================================================================================== */
+@media screen and (max-width: 380px) {
+  .banner_btns_group li {
+    width: 100%;
+    display: block;
+  }
+  .banner_btns_group li:not(:last-child) {
+    margin-right: 0px;
+    margin-bottom: 15px;
+  }
+  .banner_btns_group .custom_btn {
+    width: 100%;
+  }
+
+  .banner_counter small {
+    font-size: 9px;
+  }
+
+  .banner_counter li:not(:last-child) {
+    margin-right: 15px;
+  }
+}
+/* ====================================================================================================
+9 - media screen and (max-width: 320px) - end
+==================================================================================================== */

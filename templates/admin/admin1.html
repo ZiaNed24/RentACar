@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<!-- Mirrored from www.ecommerce-admin.com/demo/page-index-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 04 May 2022 13:56:50 GMT -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Sample title - Ecommerce admin dashboard template</title>
+
+  <link href="../../static/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+
+  <link href="../../static/css/bootstrapf9e3.css?v=1.1" rel="stylesheet" type="text/css"/>
+
+  <!-- custom style -->
+  <link href="../../static/css/uif9e3.css?v=1.1" rel="stylesheet" type="text/css"/>
+  <link href="../../static/css/responsivef9e3.css?v=1.1" rel="stylesheet" />
+
+  <!-- iconfont -->
+  <link rel="stylesheet" href="../../static/fonts/material-icon/css/round.css"/>
+
+</head>
+<body>
+
+<b class="screen-overlay"></b>
+
+<aside class="navbar-aside" id="offcanvas_aside">
+<div class="aside-top">
+  <a href="../../static/page-index-1.html" class="brand-wrap">
+    <img src="../../static/images/logo.svg" height="46" class="logo" alt="Ecommerce dashboard template">
+  </a>
+  <div>
+    <button class="btn btn-icon btn-aside-minimize"> <i class="text-muted material-icons md-menu_open"></i> </button>
+  </div>
+</div> <!-- aside-top.// -->
+
+
+</aside>
+<main class="main-wrap">
+
+
+{% block body %}{% endblock %}
+<script type="text/javascript">
+	if(localStorage.getItem("darkmode")){
+		var body_el = document.body;
+		body_el.className += 'dark';
+	}
+</script>
+
+<script src="../../static/js/jquery-3.5.0.min.js"></script>
+<script src="../../static/js/bootstrap.bundle.min.js"></script>
+
+<!-- ChartJS files-->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+<!-- Custom JS -->
+<script src="../../static/js/scriptc619.js?v=1.0" type="text/javascript"></script>
+
+<!-- ChartJS customize-->
+<script>
+	var ctx = document.getElementById('myChart').getContext('2d');
+	var chart = new Chart(ctx, {
+	    // The type of chart we want to create
+	    type: 'line',
+
+	    // The data for our dataset
+	    data: {
+	        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+	        datasets: [
+	        {
+	            label: 'Sales',
+	            backgroundColor: 'rgb(44, 120, 220)',
+	            borderColor: 'rgb(44, 120, 220)',
+	            data: [18, 17, 4, 3, 2, 20, 25, 31, 25, 22, 20, 9]
+	        },
+	        {
+	            label: 'Visitors',
+	            backgroundColor: 'rgb(180, 200, 230)',
+	            borderColor: 'rgb(180, 200, 230)',
+	            data: [40, 20, 17, 9, 23, 35, 39, 30, 34, 25, 27, 17]
+	        } 
+
+	        ]
+	    },
+
+	    // Configuration options go here
+	    options: {}
+	});
+</script>
+
+</body>
+
+<!-- Mirrored from www.ecommerce-admin.com/demo/page-index-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 04 May 2022 13:56:58 GMT -->
+</html>
